@@ -7,11 +7,6 @@ type AppError struct {
 	Message string `json:"message"`
 }
 
-func (e AppError) AsMessage() *AppError {
-	return &AppError{
-		Message: e.Message,
-	}
-}
 //404
 func NewNotFoundError(message string) *AppError {
 	return &AppError{
